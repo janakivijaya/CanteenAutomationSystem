@@ -36,9 +36,15 @@ public class PaymentServiceImpl implements IPaymentService{
 			return null;
 		}*/
 		@Override
-		public List<Payment> getPaymentById(int PaymentId){
+		public Payment getPaymentById(int PaymentId) {
 			
-			return payRepo.findByPaymentId(PaymentId);
+			Optional<Payment> pay = payRepo.findById(PaymentId);
+			if(pay.isPresent()) {
+				return pay.get();
+			}
+			else {
+				return null;
+			}
 			
 		}
 		@Override

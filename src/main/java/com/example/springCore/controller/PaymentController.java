@@ -35,9 +35,9 @@ public class PaymentController {
 	
 	//get all payment based on id
 	@GetMapping("/payment/{id}")
-	ResponseEntity<List<Payment>> getPaymentById(@PathVariable("id")int id)
+	ResponseEntity<Payment> getPaymentById(@PathVariable("id")int Paymentid)
 	{
-	   List<Payment>payment = payServ.getPaymentById(id);
+	   Payment payment = payServ.getPaymentById(Paymentid);
 		return new ResponseEntity<>(payment, HttpStatus.OK);
 	}
 	/*

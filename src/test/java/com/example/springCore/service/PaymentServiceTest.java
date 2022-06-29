@@ -39,9 +39,9 @@ public class PaymentServiceTest {
 	@Test
 	void GetAllPayments() {
 		List<Payment> payments = paymentServ.getAllPayments();
-		assertEquals(1, payments.size());
+		assertEquals(2, payments.size());
 		Payment payment = payments.get(0);
-		assertEquals(1, payment.getPaymentId());
+		assertEquals(2, payment.getPaymentId());
 	}
 
 }

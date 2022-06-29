@@ -11,7 +11,7 @@ public interface IPaymentService  {
 
 	List<Payment> getAllPayments();
 	
-	List<Payment> getPaymentById(int paymentid);
+	Payment getPaymentById(int paymentid);
 	List<Payment> getPaymentByTotalPayment(double totalPayment);
 	//List<Payment> getPaymentByPaymentType(String paymentType);
     List<Payment> getPaymentByPaymentType(String CreditCard);

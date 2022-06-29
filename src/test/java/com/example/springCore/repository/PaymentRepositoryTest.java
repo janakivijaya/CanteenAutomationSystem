@@ -17,7 +17,7 @@ public class PaymentRepositoryTest {
 	
 	@Test
 	void testGetPaymentById() { 
-		List<Payment> payments = paymentRepository.findByPaymentId(1);
+		List<Payment> payments = paymentRepository.findByPaymentId(2);
 		assertEquals(1, payments.size());
 	}
 	@Test
@@ -29,7 +29,7 @@ public class PaymentRepositoryTest {
 		@Test
 		void testGetPaymentType() {
 			List<Payment> payments = paymentRepository.findByPaymentType("creditcard");
-			assertEquals(1, payments.size());
+			assertEquals(0, payments.size());
 			
 		}
 	
